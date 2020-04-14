@@ -1,6 +1,7 @@
-//team
+//this project create with  mohammed mostafa 
+//
 //ali mohammed abd alall
-//mohammed mostafa 
+
 #include<bits/stdc++.h>
 #include <conio.h> 
 #include <direct.h>
