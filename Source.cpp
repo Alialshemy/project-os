@@ -72,6 +72,7 @@ struct File {
 }; 
 
 long long totalSize, currentSize = 0;
+// folder structure 
 struct Folder {
 	vector<File> files;
 	vector<Folder> folders;
@@ -149,7 +150,7 @@ struct Folder {
 		cout << "The File Not Found " << s << endl;
 
 	}
-
+            // delete folder from my volume with name
 	void deleteFolder(vector<string> v) {
 		string s = v[1];
 		for (int i = 2; i < v.size(); i++)
@@ -214,6 +215,7 @@ struct Folder {
 		}
 		closedir(dir);
 	}
+	// funcation git path and return folder 
 	string getNameFolder(string  path) {
 		string s;
 		while (path.back() != '\\')
@@ -278,7 +280,8 @@ struct Folder {
 		printf("------------------------------------------------------------------\n");
 		cout << endl;
 
-	}
+	} 
+	 // copy file from disk to my disk
 	void copyFile(vector<string> v) {
 		string s = v[1];
 		for (int i = 2; i < v.size(); i++)
@@ -300,7 +303,8 @@ struct Folder {
 		currentSize += f.size;
 		files.push_back(f);
 
-	}
+	} 
+	// write folder in from my volume to disk
 	void WriteFile(vector<string> v) {
 		string newName = v[2];
 		string path = v[3];
